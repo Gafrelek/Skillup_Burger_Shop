@@ -16,7 +16,7 @@ export default function CartItem({
       <div>
         <button>+</button>
         <input type="text" value="0" />
-        <button>+</button>
+        <button>-</button>
       </div>
     </div>
   );

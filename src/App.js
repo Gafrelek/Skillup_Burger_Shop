@@ -10,9 +10,9 @@ import Shipping from "./assets/components/cart/Shipping";
 
 import Login from "./assets/components/login/Login";
 import Profile from "./assets/components/profile/Profile";
-// Add module imports for MY ORDERS
+import MyOrders from "./assets/components/myOrders/MyOrders";
 
-// import OrderDetails from "./assets/components/myOrders/OrderDetails";
+import OrderDetails from "./assets/components/myOrders/OrderDetails";
 import About from "./assets/components/about/About";
 
 import "./styles/app.scss";
@@ -44,9 +44,9 @@ function App() {
 
         <Route path="/login" element={<Login />} />
         <Route path="/me" element={<Profile />} />
-        {/* //           Add the Route for MY ORDERS */}
+        <Route path="/myorders" element={<MyOrders />} />
 
-        {/* <Route path="/order/:id" element={<OrderDetails />} /> */}
+        <Route path="/order/:id" element={<OrderDetails />} />
       </Routes>
 
       <Footer />

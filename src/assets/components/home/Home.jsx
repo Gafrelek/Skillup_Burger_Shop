@@ -1,9 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
-import Founder from "./Founder";
-import Menu from "./Menu";
-import Contact from "../contact/Contact";
-import About from "../about/About";
 
 export default function Home() {
   const options = {
