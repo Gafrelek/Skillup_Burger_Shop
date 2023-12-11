@@ -4,9 +4,9 @@ import Footer from "./assets/components/layout/Footer";
 import Header from "./assets/components/layout/Header";
 import Contact from "./assets/components/contact/Contact";
 import Menu from "./assets/components/home/Menu";
-// Add module imports for CART
+import Cart from "./assets/components/cart/Cart";
 
-// Add module imports for Shipping
+import Shipping from "./assets/components/cart/Shipping";
 
 import Login from "./assets/components/login/Login";
 import Profile from "./assets/components/profile/Profile";
@@ -39,9 +39,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/menu" element={<Menu />} />
-        {/* //           Add the Route for CART */}
-
-        {/* //           Add the Route for SHIPPING */}
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/shipping" element={<Shipping />} />
 
         <Route path="/login" element={<Login />} />
         <Route path="/me" element={<Profile />} />

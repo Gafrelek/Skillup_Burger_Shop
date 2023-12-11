@@ -21,7 +21,7 @@ function Menu() {
         <MenuCard
           itemNum={1}
           burgerSrc={burger2}
-          price={250}
+          price={450}
           title="Bacon Burger"
           // handler={addToCartHandler}
           delay={0.1}
@@ -29,7 +29,7 @@ function Menu() {
         <MenuCard
           itemNum={1}
           burgerSrc={burger3}
-          price={300}
+          price={2000}
           title="Double Burger Menu"
           // handler={addToCartHandler}
           delay={0.1}
