@@ -1,5 +1,5 @@
 import React from "react";
-import { IoFastFoodOutline } from "react-icons/io5";
+import { PiHamburgerDuotone } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import { FiShoppingCart, FiLogIn } from "react-icons/fi";
 import { FaUser } from "react-icons/fa";
@@ -10,8 +10,7 @@ export default function Header() {
   return (
     <nav>
       <motion.div initial={{ x: "-100%" }} whileInView={{ x: 0 }}>
-        {/* <IoFastFoodOutline /> */}
-        <img src="../../burger-logo.svg" alt="burger logo" />
+        <PiHamburgerDuotone />
       </motion.div>
       <div>
         <Link to="/">Home</Link>

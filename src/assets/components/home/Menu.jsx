@@ -7,8 +7,8 @@ import burger3 from "../../burger3.png";
 function Menu() {
   return (
     <div id="menu">
+      <h1>MENU</h1>
       <div>
-        <h1>MENU</h1>
         {/* <Popup trigger=></Popup> */}
         <MenuCard
           itemNum={1}
