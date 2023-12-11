@@ -43,7 +43,7 @@ function App() {
 
         {/* //           Add the Route for SHIPPING */}
 
-        {/* <Route path="/login" element={<Login />} /> */}
+        <Route path="/login" element={<Login />} />
         <Route path="/me" element={<Profile />} />
         {/* //           Add the Route for MY ORDERS */}
 
