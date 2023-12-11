@@ -1,6 +1,6 @@
 // Write all the code here
 import React from "react";
-import CartItem from "../cart/CartItem";
+// import CartItem from "../cart/CartItem";
 
 export default function OrderDetails(order) {
   return (
