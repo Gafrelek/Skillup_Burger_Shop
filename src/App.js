@@ -12,7 +12,7 @@ import Login from "./assets/components/login/Login";
 import Profile from "./assets/components/profile/Profile";
 // Add module imports for MY ORDERS
 
-import OrderDetails from "./assets/components/myOrders/OrderDetails";
+// import OrderDetails from "./assets/components/myOrders/OrderDetails";
 import About from "./assets/components/about/About";
 
 import "./styles/app.scss";

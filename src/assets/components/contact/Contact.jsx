@@ -1,6 +1,6 @@
 import Popup from "reactjs-popup";
 import React from "react";
-import { MDBInput, MDBCheckbox, MDBBtn } from "mdb-react-ui-kit";
+import { MDBInput, MDBBtn } from "mdb-react-ui-kit";
 
 export default function Contact() {
   return (
@@ -20,9 +20,12 @@ export default function Contact() {
           rows={20}
           label="Message"
         />
-        <MDBBtn type="submit" className="mb-4" block>
-          Send
-        </MDBBtn>
+        <Popup
+          trigger={
+            <MDBBtn type="submit" className="mb-4" block>
+              Send
+            </MDBBtn>
+          }></Popup>
       </form>
     </div>
   );
