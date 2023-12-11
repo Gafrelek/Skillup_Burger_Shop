@@ -6,32 +6,36 @@ import burger3 from "../../burger3.png";
 
 function Menu() {
   return (
-    <>
-      <MenuCard
-        itemNum={1}
-        burgerSrc={burger1}
-        price={200}
-        title="Cheese Burger"
-        // handler={addToCartHandler}
-        delay={0.1}
-      />
-      <MenuCard
-        itemNum={1}
-        burgerSrc={burger2}
-        price={250}
-        title="Bacon Burger"
-        // handler={addToCartHandler}
-        delay={0.1}
-      />
-      <MenuCard
-        itemNum={1}
-        burgerSrc={burger3}
-        price={300}
-        title="Double Burger Menu"
-        // handler={addToCartHandler}
-        delay={0.1}
-      />
-    </>
+    <div id="menu">
+      <div>
+        <h1>MENU</h1>
+        {/* <Popup trigger=></Popup> */}
+        <MenuCard
+          itemNum={1}
+          burgerSrc={burger1}
+          price={200}
+          title="Cheese Burger"
+          // handler={addToCartHandler}
+          delay={0.1}
+        />
+        <MenuCard
+          itemNum={1}
+          burgerSrc={burger2}
+          price={250}
+          title="Bacon Burger"
+          // handler={addToCartHandler}
+          delay={0.1}
+        />
+        <MenuCard
+          itemNum={1}
+          burgerSrc={burger3}
+          price={300}
+          title="Double Burger Menu"
+          // handler={addToCartHandler}
+          delay={0.1}
+        />
+      </div>
+    </div>
   );
 }
 export default Menu;

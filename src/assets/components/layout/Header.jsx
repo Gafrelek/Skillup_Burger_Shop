@@ -10,7 +10,8 @@ export default function Header() {
   return (
     <nav>
       <motion.div initial={{ x: "-100%" }} whileInView={{ x: 0 }}>
-        <IoFastFoodOutline />
+        {/* <IoFastFoodOutline /> */}
+        <img src="../../burger-logo.svg" alt="burger logo" />
       </motion.div>
       <div>
         <Link to="/">Home</Link>
