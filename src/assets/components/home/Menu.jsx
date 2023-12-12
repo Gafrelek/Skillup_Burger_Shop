@@ -9,7 +9,6 @@ function Menu() {
     <div id="menu">
       <h1>MENU</h1>
       <div>
-        {/* <Popup trigger=></Popup> */}
         <MenuCard
           itemNum={1}
           burgerSrc={burger1}

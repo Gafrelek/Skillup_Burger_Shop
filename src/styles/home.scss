@@ -1,36 +1,45 @@
 @import "colors";
 
 .home {
+  position: relative;
+
   height: 100vh;
   overflow-x: hidden;
 
   div {
+    color: #ff3c00;
     padding-left: 8rem;
-    padding-top: 15rem;
+    padding-top: 10rem;
     > h1 {
+      text-shadow: 1px 3px 1px hsl(0, 71%, 36%);
       font-size: 4rem;
       text-transform: uppercase;
     }
 
     > p {
-      font-size: 1.2rem;
+      font-size: 2rem;
+      text-shadow: 1px 2px 0 hsl(0, 56%, 2%);
+
     }
   }
 
   > a {
     display: block;
-    margin: 2rem 8rem;
+    margin: 4rem 8rem;
     width: 10rem;
-    background-color: $red;
+    background-color: rgb(235, 142, 42);
+    border-width: 2px;
+    border-style: solid;
+    border-color: $reddark;
     color: white;
     text-align: center;
-    border: none;
-    font-size: 1rem;
+    font-size: 1,5rem;
     border-radius: 10px;
     padding: 1rem;
     cursor: pointer;
     &:hover {
-      background-color: $reddark;
+      color: white;
+      border-color: yellow;
     }
   }
 
@@ -38,12 +47,25 @@
     content: "";
     width: 100%;
     height: 100%;
-    background-image: url("../assets/bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url("../assets/burger-bg.jpg");
     position: absolute;
-    left: 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 78% 30%;
     z-index: -1;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .home {
+    > div {
+      padding-left: 5rem;
+      padding-top: 6rem;
+    }
+
+    > a {
+      margin: 2rem 5rem;
+    }
   }
 }
 
@@ -51,12 +73,18 @@
   .home {
     > div {
       text-align: center;
-      padding-top: 10rem;
+      padding-top: 2rem;
       padding-left: 0rem;
     }
 
     > a {
-      margin: 2rem auto;
+      margin: 28rem auto;
+    }
+    .home::before {
+      background-size: cover;
+
+      // background-size: 20%;
+      background-position: right;
     }
   }
 }
