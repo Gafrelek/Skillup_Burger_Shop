@@ -1,36 +1,43 @@
 @import "colors";
 
 nav {
-  height: 5rem;
-  padding: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: rgb(71, 51, 66);
   box-shadow: none;
 
   > div {
     display: flex;
     align-items: center;
+    margin-right: 2rem;
 
     > svg {
-      color: $red;
-      font-size: 3rem;
+      margin-right: 2rem;
+      color: #9f0808;
+      margin: 0.5rem 1rem;
+      filter: drop-shadow(1px 0 0 pink) drop-shadow(-1px 0 0 pink)
+        drop-shadow(0 1px 0 pink) drop-shadow(0 -1px 0 pink);
+      font-size: 4rem;
     }
 
     > a {
       margin: 0 2rem;
-      color: $dark;
+      color: white;
       transition: color 0.3s;
+      font-size: 1.5rem;
 
       &:hover {
-        color: $lightdark;
+        transition: text-shadow 0.5s;
+        color: white;
+        text-shadow: 3px 3px brown, 3px -3px brown, -3px 3px brown,
+          -3px -3px brown;
       }
 
       > svg {
         color: $red;
         transition: inherit;
-        font-size: 1.5rem;
+        font-size: 2rem;
         &:hover {
           color: $lightdark;
         }
