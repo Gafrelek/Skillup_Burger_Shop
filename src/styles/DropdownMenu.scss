@@ -4,9 +4,9 @@
 }
 
 .dropdown-toggle {
-  background-color: #fff;
   border: none;
-  color: #333;
+  background-color: yellow;
+  color: #a07979;
   padding: 10px;
   font-size: 16px;
   cursor: pointer;
@@ -22,14 +22,13 @@
   left: 0;
   z-index: 1;
   min-width: 120px;
-  background-color: #fff;
+  background-color: rgba(121, 121, 92, 0.927);
   box-shadow: none;
   padding: 10px 0;
 }
 
 .dropdown-item {
   color: #333;
-  padding: 10px;
   font-size: 16px;
   text-decoration: none;
   display: block;

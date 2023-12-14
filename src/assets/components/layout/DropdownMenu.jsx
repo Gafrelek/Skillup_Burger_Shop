@@ -15,15 +15,10 @@ function DropdownMenu() {
 
   return (
     <div>
-      <nav className="navbar shadow-0 navbar-dark">
+      <nav className="navbar shadow-0">
         <div className="container">
           <div class="btn-group">
-            <button
-              type="button"
-              className="btn btn-primary dropdown-toggle"
-              data-bs-toggle="dropdown"
-              data-bs-display="static"
-              aria-expanded="false">
+            <button type="button" className="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               Menu
             </button>
             <ul className="dropdown-menu dropdown-menu-end">
