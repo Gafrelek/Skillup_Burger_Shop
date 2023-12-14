@@ -16,6 +16,7 @@ import OrderDetails from "./assets/components/myOrders/OrderDetails";
 import About from "./assets/components/about/About";
 
 import "./styles/app.scss";
+import "./styles/DropdownMenu.scss";
 import "./styles/header.scss";
 import "./styles/home.scss";
 import "./styles/founder.scss";

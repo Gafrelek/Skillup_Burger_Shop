@@ -18,7 +18,9 @@ export default function Home() {
           <h1>Burger Shop</h1>
           <p>Have a tasty life</p>
         </div>
-        <a href="/Menu">Explore Menu</a>
+        <div className="buttonContainer">
+          <a href="/Menu">Explore Menu</a>
+        </div>
       </div>
     </>
   );

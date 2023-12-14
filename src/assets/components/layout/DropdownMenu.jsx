@@ -1,33 +1,41 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function DropdownMenu() {
-  const [navLinks, setNavLinks] = useState([]);
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
 
-  useEffect(() => {
-    const navs = [
-      { name: "Login", path: "/login" },
-      { name: "Orders", path: "/myorders" },
-      { name: "Logout", path: "/login" },
-    ];
-    setNavLinks(navs);
-  }, []);
+  const toggleDropdown = () => {
+    setDropdownOpen(!isDropdownOpen);
+  };
+
+  const closeDropdown = () => {
+    setDropdownOpen(false);
+  };
+
+  const navs = [
+    { name: "Login", path: "/login" },
+    { name: "Orders", path: "/myorders" },
+    { name: "Logout", path: "/login" },
+  ];
 
   return (
     <div>
       <nav className="navbar shadow-0">
         <div className="container">
-          <div class="btn-group">
-            <button type="button" className="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <div className="btn-group">
+            <button type="button" className="button" onClick={toggleDropdown}>
               Menu
             </button>
-            <ul className="dropdown-menu dropdown-menu-end">
-              {navLinks.map((d, i) => (
+            <ul
+              className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}
+              onMouseLeave={closeDropdown}>
+              {navs.map((d, i) => (
                 <li key={i}>
-                  <Link to={d.path}>
-                    <button className="dropdown-item" type="button">
-                      {d.name}
-                    </button>
+                  <Link
+                    to={d.path}
+                    className="dropdown-item"
+                    onClick={closeDropdown}>
+                    {d.name}
                   </Link>
                 </li>
               ))}
