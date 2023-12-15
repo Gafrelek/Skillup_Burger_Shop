@@ -1,6 +1,4 @@
-// Write all the code here
 import React from "react";
-// import CartItem from "../cart/CartItem";
 
 export default function OrderDetails(order) {
   return (
@@ -9,43 +7,43 @@ export default function OrderDetails(order) {
         <h1>ORDER DETAILS</h1>
         <div>
           <h1>Shipping</h1>
-          <p>Adress: </p>
+          <p>Address: Storgatan 123, 123 45 Stockholm, Sweden</p>
         </div>
         <div>
           <h1>Contact</h1>
-          <p>Name: </p>
-          <p>Phone: </p>
+          <p>Name: John Doe</p>
+          <p>Phone: +46 70 123 45 67</p>
         </div>
         <div>
           <h1>Status</h1>
-          <p>Order Status: </p>
-          <p>Placed: </p>
-          <p>Delivered: </p>
+          <p>Order Status: Processed</p>
+          <p>Placed: 2023-12-11 20:32</p>
+          <p>Delivered: 2023-12-11 21:12</p>
         </div>
         <div>
           <h1>Payment</h1>
-          <p>Payment Method: </p>
-          <p>Payment Reference: </p>
-          <p>Paid: </p>
+          <p>Payment Method: Card</p>
+          <p>Payment Reference: gr7e89gyrehg</p>
+          <p>Paid: 2023-12-11 20:32</p>
         </div>
         <div>
           <h1>Amount</h1>
-          <p>Total Items: </p>
-          <p>Delivery Fee: </p>
-          <p>Tax: </p>
+          <p>Total Items: 3</p>
+          <p>Delivery Fee: 200</p>
+          <p>Tax: 2732</p>
           <p>
-            <b>Total Amount: </b>
+            <b>Total Amount: 2532</b>
           </p>
         </div>
         <article>
           <h1>Ordered items</h1>
           <div>
             <h4>Cheese Burger</h4>
-            <h4>2 x 232</h4>
+            <h4>1 x 232</h4>
           </div>
           <div>
             <h4>Veg. Cheese Burger</h4>
-            <h4>2 x 500</h4>
+            <h4>1 x 500</h4>
           </div>
           <div>
             <h4>Burger Fries</h4>
@@ -56,7 +54,7 @@ export default function OrderDetails(order) {
               <b>Sub Total</b>
             </h4>
             <h4>
-              <b>{2 * 232 + 2 * 500 + 1 * 1800}</b>
+              <b>{1 * 232 + 1 * 500 + 1 * 1800}</b>
             </h4>
           </div>
         </article>

@@ -1,14 +1,14 @@
 @import "colors";
 
 .orderDetails {
-  background-color: $pink;
+  background-color: rgb(255, 239, 239);
   width: 100%;
-
+  padding: 3rem;
   > main {
     background-color: white;
     max-width: 900px;
+    border-radius: 12px;
     margin: auto;
-    padding: 2rem;
     overflow-x: auto;
     > h1 {
       text-transform: uppercase;
@@ -42,7 +42,7 @@
         font-size: 1.8rem;
         text-transform: uppercase;
         letter-spacing: 5px;
-        margin: 2rem 0;
+        margin: 2rem ;
       }
 
       > div {

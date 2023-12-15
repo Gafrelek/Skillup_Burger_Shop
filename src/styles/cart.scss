@@ -1,18 +1,19 @@
-@import "colors";
+/* Add this CSS to your stylesheet */
 .cart {
-  background-color: $pink;
+  background-color: rgb(255, 239, 239);
   width: 100%;
   height: 100vh;
-
+  padding: 3rem;
   > main {
-    height: 100%;
     background-color: white;
     max-width: 900px;
     margin: auto;
     padding: 2rem;
+    border-radius: 1px;
 
     > article {
       padding: 2rem;
+
       > div {
         display: flex;
         justify-content: space-between;
@@ -20,12 +21,11 @@
       }
 
       > a {
-        background-color: $red;
+        background-color: brown;
         color: white;
         padding: 0.5rem 1rem;
         border-radius: 5px;
         text-align: center;
-        margin-top: 2rem;
         float: right;
       }
     }
@@ -63,7 +63,7 @@
       margin: 0.25rem;
       outline: none;
       border-radius: 5px;
-      color: $red;
+      color: red;
 
       &::-webkit-outer-spin-button,
       &::-webkit-inner-spin-button {
@@ -76,7 +76,7 @@
       cursor: pointer;
       border: none;
       padding: 0.5rem;
-      background-color: $dark;
+      background-color: darkgray;
       color: white;
       border-radius: 5px;
     }
@@ -88,5 +88,7 @@
     float: none;
     display: block;
     width: 100%;
+    text-align: center; /* Center the button text */
+    margin: 1rem 0; /* Add some spacing */
   }
 }

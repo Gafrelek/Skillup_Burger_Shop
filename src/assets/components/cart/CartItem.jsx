@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function CartItem({
   itemNum,
@@ -7,6 +7,18 @@ export default function CartItem({
   title,
   handler,
 }) {
+  const [quantity, setQuantity] = useState(0);
+
+  const handleIncrement = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const handleDecrement = () => {
+    if (quantity > 0) {
+      setQuantity(quantity - 1);
+    }
+  };
+
   return (
     <div className="cartItem">
       <div>
@@ -14,9 +26,9 @@ export default function CartItem({
         <img src={burgerSrc} alt={itemNum} />
       </div>
       <div>
-        <button>+</button>
-        <input type="text" value="0" />
-        <button>-</button>
+        <button onClick={handleIncrement}>+</button>
+        <input type="text" value={quantity} readOnly />
+        <button onClick={handleDecrement}>-</button>
       </div>
     </div>
   );
