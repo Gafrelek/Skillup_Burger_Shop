@@ -1,83 +1,72 @@
 import React, { useState } from "react";
-import {
-  MDBContainer,
-  MDBTabs,
-  MDBTabsItem,
-  MDBTabsLink,
-  MDBTabsContent,
-  MDBTabsPane,
-  MDBBtn,
-  MDBIcon,
-  MDBInput,
-  MDBCheckbox,
-} from "mdb-react-ui-kit";
+import { MDBIcon } from "mdb-react-ui-kit";
 
 export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [rememberMe, setRememberMe] = useState(false);
+
+  const handleSignIn = () => {
+    console.log("Signing in...", email, password, rememberMe);
+  };
+
   return (
-    <div className="d-flex justify-content">
-      <MDBTabsPane show="true">
-        <div className="text-center mb-3">
+    <div className="login">
+      <div className="login-container">
+        <div className="social-container">
           <p>Sign in with:</p>
-          <div
-            className="d-flex justify-content-between mx-auto"
-            style={{ width: "40%" }}>
-            <MDBBtn
-              tag="a"
-              color="none"
-              className="m-1"
-              style={{ color: "#1266f1" }}>
-              <MDBIcon fab icon="facebook-f" size="sm" />
-            </MDBBtn>
-            <MDBBtn
-              tag="a"
-              color="none"
-              className="m-1"
-              style={{ color: "#1266f1" }}>
-              <MDBIcon fab icon="twitter" size="sm" />
-            </MDBBtn>
-            <MDBBtn
-              tag="a"
-              color="none"
-              className="m-1"
-              style={{ color: "#1266f1" }}>
-              <MDBIcon fab icon="google" size="sm" />
-            </MDBBtn>
-            <MDBBtn
-              tag="a"
-              color="none"
-              className="m-1"
-              style={{ color: "#1266f1" }}>
-              <MDBIcon fab icon="github" size="sm" />
-            </MDBBtn>
+          <div className="social-icons">
+            <button className="social-icon-button">
+              <MDBIcon fab icon="facebook-f" size="lg" />
+            </button>
+            <button className="social-icon-button">
+              <MDBIcon fab icon="twitter" size="lg" />
+            </button>
+            <button className="social-icon-button">
+              <MDBIcon fab icon="google" size="lg" />
+            </button>
+            <button className="social-icon-button">
+              <MDBIcon fab icon="github" size="lg" />
+            </button>
           </div>
-          <p className="text-center mt-3">or:</p>
+          <p className="or-text">or:</p>
         </div>
-        <MDBInput
-          wrapperClass="mb-4"
-          label="Email address"
-          id="form1"
+        <input
+          className="form-input"
           type="email"
+          placeholder="Email address"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
-        <MDBInput
-          wrapperClass="mb-4"
-          label="Password"
-          id="form2"
+        <input
+          className="form-input"
           type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
-        <div className="d-flex justify-content-between mx-4 mb-4">
-          <MDBCheckbox
-            name="flexCheck"
-            value=""
+        <div className="remember-me-container">
+          <input
+            type="checkbox"
             id="flexCheckDefault"
-            label="Remember me"
+            checked={rememberMe}
+            onChange={() => setRememberMe(!rememberMe)}
           />
-          <a href="!#">Forgot password?</a>
+          <label htmlFor="flexCheckDefault">Remember me</label>
+          <a href="#!" className="forgot-password-link">
+            Forgot password?
+          </a>
         </div>
-        <MDBBtn className="mb-4 w-100">Sign in</MDBBtn>
-        <p className="text-center">
-          Not a member? <a href="#!">Register</a>
+        <button className="sign-in-button" onClick={handleSignIn}>
+          Sign in
+        </button>
+        <p className="not-member-text">
+          Not a member?{" "}
+          <a href="#!" className="register-link">
+            Register
+          </a>
         </p>
-      </MDBTabsPane>
+      </div>
     </div>
   );
 }

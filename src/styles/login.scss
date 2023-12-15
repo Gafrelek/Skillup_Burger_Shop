@@ -1,7 +1,87 @@
 .login {
-  
-  width: 60%;
-  min-height: 100vh;
+  background-color: lightpink;
+  display: flex;
+  justify-content: center;
+}
+
+.login-container {
   background-color: white;
-  padding: 4rem;
+  padding: 20px;
+  border-radius: 10px;
+  width: 40%;
+  margin: auto;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.social-container {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin: auto;
+}
+
+.social-icon-button {
+  background-color: transparent;
+  border: none;
+}
+
+.social-icon-button:hover {
+  color: brown;
+}
+
+.or-text {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.remember-me-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 1rem 1rem 1rem;
+}
+
+.forgot-password-link {
+  text-decoration: none;
+  color: brown;
+  margin-right: 1rem;
+}
+
+.sign-in-button {
+  background-color: brown;
+  color: white;
+  width: 60%;
+  margin: auto;
+  text-transform: uppercase;
+  border: 0;
+  box-shadow: 0 4px 9px -4px rgba(0, 0, 0, 0.35);
+  font-weight: 500;
+  padding: 0.625rem 1.5rem 0.5rem 1.5rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  display: block;
+}
+
+.sign-in-button:hover {
+  background-color: darkbrown;
+}
+
+.not-member-text {
+  text-align: center;
+}
+
+.register-link {
+  text-decoration: none;
+  color: brown;
 }
