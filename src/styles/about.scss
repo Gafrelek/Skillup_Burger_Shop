@@ -5,8 +5,8 @@
   background-color: $pink;
 
   > main {
-    background-color: white;
-    max-width: 900px;
+    background-color: lightpink;
+    width: 80%;
     height: 100%;
     margin: auto;
 
@@ -21,7 +21,7 @@
     > article {
       margin: 2rem 0;
       > h4 {
-        font: 100 2rem "Roboto";
+        font: 400 2rem "Roboto";
         text-transform: uppercase;
         text-align: center;
         padding: 2rem 0;
@@ -29,6 +29,7 @@
 
       > p {
         letter-spacing: 3px;
+        font-size: 1.5rem;
         word-spacing: 3px;
         padding: 2rem;
         width: 50%;
@@ -57,34 +58,43 @@
 
     > div {
       background-color: $dark;
-      padding: 2rem;
       color: white;
       > h2 {
-        text-align: center;
         text-transform: uppercase;
+        padding: 1rem 2rem 0.5rem;
       }
 
       > article {
         display: flex;
         align-items: center;
-        justify-content: center;
+      }
+    }
+  }
+}
 
-        > div {
-          margin: 2rem;
-          > img {
-            width: 150px;
-            height: 150px;
-            border-radius: 100%;
-          }
-          > h3 {
-            margin: 1rem;
-          }
-        }
+@media screen and (max-width: 1000px) {
+  .about > main {
+    width: 100%;
+    > h1 {
+      font: 100 2rem "Roboto";
+      text-align: center;
+    }
+
+    > article > p {
+      width: 80%;
+      font-size: 1rem;
+    }
+
+    > div {
+      > h2 {
+        text-align: center;
+      }
+
+      > article {
+        flex-direction: column;
+
         > p {
-          margin: 0 1rem;
-          width: 50%;
-          letter-spacing: 2px;
-          line-height: 150%;
+          text-align: center;
         }
       }
     }
@@ -93,20 +103,28 @@
 
 @media screen and (max-width: 600px) {
   .about > main {
+    width: 100%;
     > h1 {
-      font: 100 3rem "Roboto";
+      font: 100 2rem "Roboto";
       text-align: center;
     }
 
     > article > p {
       width: 100%;
+      font-size: 1rem;
     }
 
-    > div > article {
-      flex-direction: column;
-
-      > p {
+    > div {
+      > h2 {
         text-align: center;
+      }
+
+      > article {
+        flex-direction: column;
+
+        > p {
+          text-align: center;
+        }
       }
     }
   }
