@@ -1,16 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { Country, State } from "country-state-city";
 import Popup from "reactjs-popup";
 
 export default function Shipping() {
+  const [selectedCountry, setSelectedCountry] = useState("");
+  const [selectedState, setSelectedState] = useState("");
+
+  const handleCountryChange = (event) => {
+    setSelectedCountry(event.target.value);
+  };
+
+  const handleStateChange = (event) => {
+    setSelectedState(event.target.value);
+  };
+
   return (
     <section className="shipping">
       <main>
         <h1>Shipping Details</h1>
         <form>
           <div>
-            <label>H.No.</label>
-            <input type="text" placeholder="Enter House No." />
+            <label>Street Name</label>
+            <input type="text" placeholder="Enter Street Name" />
           </div>
           <div>
             <label>City</label>
@@ -19,11 +30,11 @@ export default function Shipping() {
           <div>
             {/* COUNTRY DROPDOWN*/}
             <label>Country</label>
-            <select>
+            <select value={selectedCountry} onChange={handleCountryChange}>
               <option value="">Country</option>
               {Country &&
                 Country.getAllCountries().map((i) => (
-                  <option value="{i.isoCode}" key="{i.isoCode}">
+                  <option value={i.isoCode} key={i.isoCode}>
                     {i.name}
                   </option>
                 ))}
@@ -31,11 +42,11 @@ export default function Shipping() {
           </div>
           <div>
             <label>State</label>
-            <select>
+            <select value={selectedState} onChange={handleStateChange}>
               <option value="">State</option>
               {State &&
-                State.getStatesOfCountry("IN").map((i) => (
-                  <option value="{i.isoCode}" key="{i.isoCode}">
+                State.getStatesOfCountry(selectedCountry).map((i) => (
+                  <option value={i.isoCode} key={i.isoCode}>
                     {i.name}
                   </option>
                 ))}
@@ -49,10 +60,10 @@ export default function Shipping() {
             <label>Phone No.</label>
             <input type="number" placeholder="Enter Phone No." />
           </div>
-          {/* // Enter thr code for contact */}
+          {/* // Enter the code for contact */}
           <Popup
             trigger={
-              <button className="link" type="button">
+              <button className=" button-style link" type="button">
                 Confirm Order
               </button>
             }
