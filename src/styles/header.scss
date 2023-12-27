@@ -29,17 +29,14 @@ nav {
       &:hover {
         transition: text-shadow 0.5s;
         color: white;
-        text-shadow: 3px 3px brown, 3px -3px brown, -3px 3px brown,
-          -3px -3px brown;
+        text-shadow: 2px 2px black, 2px -2px black, -2px 2px black,
+          -2px -2px black;
       }
 
       > svg {
         color: $red;
         transition: inherit;
         font-size: 2rem;
-        &:hover {
-          color: $lightdark;
-        }
       }
     }
   }

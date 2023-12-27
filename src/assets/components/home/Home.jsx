@@ -1,16 +1,6 @@
 import React from "react";
 
 export default function Home() {
-  // const options = {
-  //   initial: {
-  //     x: "-100%",
-  //     opacity: 0,
-  //   },
-  //   whileInView: {
-  //     x: 0,
-  //     opacity: 1,
-  //   },
-  // };
   return (
     <>
       <div className="home">
