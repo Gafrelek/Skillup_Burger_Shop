@@ -14,7 +14,6 @@ import MyOrders from "./assets/components/myOrders/MyOrders";
 
 import OrderDetails from "./assets/components/myOrders/OrderDetails";
 import About from "./assets/components/about/About";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./styles/app.scss";
 import "./styles/DropdownMenu.scss";
 import "./styles/header.scss";
@@ -49,7 +48,6 @@ function App() {
 
         <Route path="/order/:id" element={<OrderDetails />} />
       </Routes>
-      <SpeedInsights />
       <Footer />
     </Router>
   );
